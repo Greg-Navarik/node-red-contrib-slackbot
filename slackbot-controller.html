@@ -3,7 +3,9 @@
         category: 'config',
         defaults: {
             name: {value: ""},
-            bot_token: {value: ""}
+        },
+        credentials: {
+            bot_token: {type: "text"},
         },
         label: function() {
             return this.name;
@@ -20,5 +22,17 @@
         <label for="node-config-input-bot_token"><i class="fa fa-lock"></i> Slack Bot Token</label>
         <input type="text" id="node-config-input-bot_token">
     </div>
-    
+</script>
+
+<!-- Next, some simple help text is provided for the node. -->
+<script type="text/x-red" data-help-name="slackbot-listen">
+
+    <h3>About</h3>
+    <p>Likes the status specified in the ID parameter as the authenticating user. Returns the liked status when successful</p>
+
+    <h3>Use</h3>
+    <p>To use either configure the form or pass the tweet id as a parameter inside the payload object ({"tweet"":"1234567890"}).
+    </p>
+    <p>For more information on these parameters see the twitter API:</p>
+    <p><a href="https://dev.twitter.com/rest/reference/post/favorites/create" target="_blank">favorites/create</a></p>
 </script>
